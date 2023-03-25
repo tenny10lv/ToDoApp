@@ -1,0 +1,15 @@
+version: "3"
+services:
+  todo-app-api:
+    container_name: todo-app-api
+    restart: always
+    build: ./src/.
+    ports:
+      - "5000:80"
+    networks:
+      - todo_app
+
+networks:
+  todo_app:
+    name: todo_app_network
+

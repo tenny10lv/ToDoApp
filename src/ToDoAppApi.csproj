@@ -1,0 +1,88 @@
+<!--
+	MIT License
+
+	Copyright (c) 2022—2023 Mohammad Abdul Ahad Chowdhury
+
+	Permission is hereby granted, free of charge, to any person obtaining a copy
+	of this software and associated documentation files (the "Software"), to deal
+	in the Software without restriction, including without limitation the rights
+	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+	copies of the Software, and to permit persons to whom the Software is
+	furnished to do so, subject to the following conditions:
+
+	The above copyright notice and this permission notice shall be included in all
+	copies or substantial portions of the Software.
+
+	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+	SOFTWARE.
+ -->
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="7.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.4">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="7.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.4" />
+    <PackageReference Include="MiniValidation" Version="0.7.4" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.4" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.4">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Modules\" />
+    <None Remove="Modules\AuthModule\" />
+    <None Remove="Modules\ToDoModule\" />
+    <None Remove="Modules\ToDoModule\DTOs\" />
+    <None Remove="Modules\AuthModule\Models\" />
+    <None Remove="Modules\AuthModule\Entities\" />
+    <None Remove="Modules\ToDoModule\Entities\" />
+    <None Remove="Modules\ToDoModule\Models\" />
+    <None Remove="Modules\AuthModule\Services\" />
+    <None Remove="Migrations\" />
+    <None Remove="Modules\AuthModule\MapperConfigurations\" />
+    <None Remove="Modules\ToDoModule\Controllers\" />
+    <None Remove="Utils\Annotations\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Modules\" />
+    <Folder Include="Modules\AuthModule\" />
+    <Folder Include="Modules\ToDoModule\" />
+    <Folder Include="Modules\ToDoModule\DTOs\" />
+    <Folder Include="Modules\AuthModule\Models\" />
+    <Folder Include="Modules\AuthModule\Entities\" />
+    <Folder Include="Modules\ToDoModule\Entities\" />
+    <Folder Include="Modules\ToDoModule\Models\" />
+    <Folder Include="Modules\AuthModule\Services\" />
+    <Folder Include="Migrations\" />
+    <Folder Include="Modules\AuthModule\MapperConfigurations\" />
+    <Folder Include="Modules\ToDoModule\Controllers\" />
+    <Folder Include="Utils\Annotations\" />
+    <Folder Include="Modules\ToDoModule\Models\" />
+  </ItemGroup>
+</Project>
